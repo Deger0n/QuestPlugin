@@ -1,0 +1,8 @@
+name: QuestPlugin
+version: '${project.version}'
+main: me.degeron.questplugin.Main
+api-version: 1.19
+depend:
+  - ProtocolLib
+commands:
+  npc:

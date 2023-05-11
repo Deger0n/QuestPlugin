@@ -1,0 +1,94 @@
+database:
+  host: "localhost"
+  port: "3306"
+  user: "root"
+  password: ""
+  data_base_name: "quest_plugin"
+
+messages:
+  did_the_part: "&fПрогресс квеста &b%quest_name%&f: &a%progress%&f/&3%full%"
+  did_the_quest: "&fКвест &a%quest_name% &fуспешно выполнен! Награда уже у вас"
+
+npc:
+  name: "_Degeron_"
+  skin:
+    texture: "ewogICJ0aW1lc3RhbXAiIDogMTY4MzcyODczNjYxOSwKICAicHJvZmlsZUlkIiA6ICIxMjdlM2RhMjU0YWQ0NTAwYWQ3ZjViOWNiNzgzMDlmYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJfRGVnZXJvbl8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjYyZjk1ODIzOTUyMWU4MTg0NDczNDdmOTM4OWUwZmYwZmM4ODhkOGY2OTYwMjFiM2NmYjdkNmEzZjU3OWY1ZiIKICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjM0MGMwZTAzZGQyNGExMWIxNWE4YjMzYzJhN2U5ZTMyYWJiMjA1MWIyNDgxZDBiYTdkZWZkNjM1Y2E3YTkzMyIKICAgIH0KICB9Cn0="
+    signature: "J0vvytNUy/VnkDrlW6x1bMx/byQJkohGPPUWQLMw97WHp/jiKU5cFp61G3ieB8eqCr1g518J/KUxxHKnzF8JiEgO5JBS2hgIRlBm6tpDobS4sCdTkFnRvGMNDbDwWnmvugWDOyc2Q9S8ej7MejlmiflS59zI/RZxn1NRr6E4J4Es4/6QhC+B2oVA21NFkepvqrTL/V3jHgUO1JnWoh9EnoPwJsEo6jm2MncHUY7U3I80kA9pZPdagC1rr5azNoQeQPWAmPc+xbFYv66N/VFPV5BipaH0q9Tp/C+iokS4iYtsrc2qWCvmyi9NbclldwZRZFnu0XI84pckXafZgQc6ce7uRZOr4SEuTZ5yMAwj6t1r+d6nvTwp7B+DTMxN9gqNe18Ha3A4JdoRnh9qSnQdzS9RBSzCVy+1q9DdkSbDUuEY8nj0h47rKVVsB+lwZe+NGCPULzqjle53IC72sdglG4KwngaGigUvz0HFNNS48TFvDCqTaxzF6dY4UCRSKF3u55vWWXpZvGh6rJETjf+vO/j7tB1ncqvuGoj/N4nDQ/JKg6XetxQ04oKL6TCp4zCws8ZWcFMC0wqI1pH7jyBf3sEW+Vav4wp3q/k/Egbpt0orvfeiKdwbFKwSxsUmvbrJdRUB0BtCq+b664FuBbd6mBnoocSchmwHFEtdXk8ul6U="
+
+  location:
+    world: "world"
+    x: -206
+    y: 65
+    z: -133
+
+menu:
+  name: "Квесты"
+  size: 9
+  minute_update: 45
+  decor:
+    LIGHT_GRAY_STAINED_GLASS_PANE:
+      name: "&8by: _Degeron_"
+      slots:
+        - 1
+        - 2
+        - 3
+        - 5
+        - 6
+        - 7
+
+  buttons:
+    stats_item:
+      name: "&3Статистика"
+      material: BOOK
+      slot: 0
+      lore:
+        - "&aВыполнено: &2%completed%"
+        - "&cОтменено: &4%canceled%"
+
+    cancel_item:
+      name: "&cЗакрыть меню"
+      material: BARRIER
+      slot: 8
+      lore:
+
+  quest_item:
+    slot: 4
+    suggested:
+      name: "&a[Квест] %name%"
+      material: CHEST
+      lore:
+        - "&7Сложность: &6%difficulty%"
+        - "&7Награда: &6%reward%"
+        - ""
+        - "&7%description%"
+        - ""
+        - "&bНажмите, чтобы начать выполнение"
+        - "&eКвест обновится через &f%minutes% &eминут"
+
+    selected:
+      name: "&a[Квест] %name%"
+      lore:
+        - "&7Сложность: &6%difficulty%"
+        - "&7Награда: &6%reward%"
+        - ""
+        - "&7%description%"
+        - ""
+        - "&cНажмите, чтобы отменить выполнение"
+        - "&fПрогресс: &a%progress%&f/&3%full%"
+
+    done:
+      name: "&aПредложенный квест выполнен"
+      material: GOLD_INGOT
+      lore:
+        - "&eКвест обновится через &f%minutes% &eминут"
+
+    cancel:
+      name: "&cПредложенный квест отменён"
+      material: IRON_INGOT
+      lore:
+        - "&eКвест обновится через &f%minutes% &eминут"
+
+    difficulty:
+      0: "Лёгкая"
+      1: "Нормальная"
+      2: "Сложная"

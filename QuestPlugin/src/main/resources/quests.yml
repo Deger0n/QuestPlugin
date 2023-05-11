@@ -1,0 +1,35 @@
+block_break_coin_:
+  miner:
+    name: "Мелкий шахтёр"
+    material: WOODEN_PICKAXE
+    difficulty: 0
+    reward:
+      coins: 100
+      name: "100 коинов"
+    condition:
+      COBBLESTONE: 30
+    description: "Сломайте 30 булыжника"
+
+mob_kill_coin_:
+  hunter:
+    name: "Охотник на монстров"
+    material: ZOMBIE_HEAD
+    difficulty: 1
+    reward:
+      coins: 200
+      name: "200 коинов"
+    condition:
+      ZOMBIE: 10
+    description: "Убейте 10 зомби"
+
+resource_find_resource_:
+  finder_of_heart:
+    name: "Сыщик морей"
+    material: HEART_OF_THE_SEA
+    difficulty: 2
+    reward:
+      EMERALD: 65
+      name: "65 изумрудов"
+    condition:
+      HEART_OF_THE_SEA: 1
+    description: "Найдите одно сердце моря, и откройте НПС, держа предмет в главной руке"

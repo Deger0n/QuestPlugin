@@ -176,11 +176,11 @@ resource_find_resource_:
 ## 🐜 Возможная проблема
 Если плагин не включается, то замените строчку в me.degeron.questplugin.NPC.NPCManager.java
 ```java
-Field field = net.minecraft.world.entity.player.Player.class.getField("DATA_PLAYER_MODE_CUSTOMISATION");
+Field field = net.minecraft.world.entity.player.Player.class.getField("bO");
 ```
 На
 ```java
-Field field = net.minecraft.world.entity.player.Player.class.getField("b0");
+Field field = net.minecraft.world.entity.player.Player.class.getField("DATA_PLAYER_MODE_CUSTOMISATION");
 ```
 Или наоборот, также вы можете скачать другую версию плагина.
 Если ваше ядро использует mojmap, то используйте "DATA_PLAYER_MODE_CUSTOMISATION". Например у ядра paper есть 2 версии:

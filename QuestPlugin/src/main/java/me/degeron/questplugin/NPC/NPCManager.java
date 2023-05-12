@@ -47,7 +47,7 @@ public class NPCManager {
         // Настройка слоёв скина у NPC и его местоположения
         Object data = null;
         try {
-            Field field = net.minecraft.world.entity.player.Player.class.getField("bO");
+            Field field = net.minecraft.world.entity.player.Player.class.getField("bO"); // remapped kernel: bO -> DATA_PLAYER_MODE_CUSTOMISATION
             field.setAccessible(true);
             data = field.get(npc.getEntityData());
         } catch (Exception exception) {

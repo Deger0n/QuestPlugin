@@ -172,5 +172,19 @@ resource_find_resource_:
 
 ## 🌋 Добавление типов квестов
 Чтобы добавить новый тип квеста - нужно изменить код плагина. Весь код, регистрирующий выполнение квеста, находится в пакете me.degeron.questplugin.menu.event.completing.
+<br>
+## 🐜 Возможная проблема
+Если плагин не включается, то замените строчку в me.degeron.questplugin.NPC.NPCManager.java
+```java
+Field field = net.minecraft.world.entity.player.Player.class.getField("DATA_PLAYER_MODE_CUSTOMISATION");
+```
+На
+```java
+Field field = net.minecraft.world.entity.player.Player.class.getField("b0");
+```
+Или наоборот, также вы можете скачать другую версию плагина.
+Если ваше ядро использует mojmap, то используйте "DATA_PLAYER_MODE_CUSTOMISATION". Например у ядра paper есть 2 версии:
+![image](https://github.com/Deger0n/QuestPlugin/assets/90723848/1b039fbc-65aa-45d4-912c-6c92cc80b869)
+
 
 

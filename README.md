@@ -1,6 +1,6 @@
 # QuestPlugin v1.19.2
 ## 💬 Зависимости
-Для работы плагина буду нужны другие плагины:
+Для работы плагина будут нужны другие плагины:
 * [ProtocolLib 5.0.0](https://github.com/dmulloy2/ProtocolLib/releases/tag/5.0.0-rc1)
 * [Vault 1.7.3](https://www.spigotmc.org/resources/vault.34315/)
 * [EssentialsX](https://essentialsx.net/downloads.html)
